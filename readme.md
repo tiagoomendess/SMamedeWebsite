@@ -2,7 +2,7 @@
 
 Este repositório é público e contém todo o codigo do site do S. Mamede.
 
-#Instalação
+# Instalação
 É um projeto simples em Laravel. Faz clone, corre composer install, configura o .env
 para apontar para os sítios certos no ambiente local. Qualquer adição de parameter no
 .env tem de estar replicado no .env.example.
