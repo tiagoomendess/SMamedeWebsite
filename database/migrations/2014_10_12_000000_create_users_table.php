@@ -9,6 +9,13 @@ class CreateUsersTable extends Migration
     /**
      * Run the migrations.
      *
+     * Rules:
+     * 0 - Admin
+     * 1 - Direção
+     * 2 - Treinador
+     * 3 - Jogador
+     * 4 - Sócio
+     *
      * @return void
      */
     public function up()
@@ -19,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->number('role');
             $table->rememberToken();
             $table->timestamps();
         });
