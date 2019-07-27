@@ -9,7 +9,7 @@ class CreateUsersTable extends Migration
     /**
      * Run the migrations.
      *
-     * Rules:
+     * Roles:
      * 0 - Admin
      * 1 - Direção
      * 2 - Treinador
