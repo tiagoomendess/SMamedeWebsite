@@ -15,8 +15,9 @@ class CreateMediaTable extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('path')->unique(); //for not repeat files
-            $table->string('tags');
+            $table->string('path', 256); //To not repeat files
+            $table->string('thumbnail', 256);
+            $table->string('tags', 128);
             $table->timestamps();
         });
     }
