@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
             $table->timestamp('published_at');
             $table->unsignedBigInteger('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('media_id')->references('id')->on('media');
+            $table->boolean('visible')->default(false);
             $table->timestamps();
         });
     }
