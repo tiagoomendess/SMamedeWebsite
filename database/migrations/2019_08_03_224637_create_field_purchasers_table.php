@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDonationsIntentsTable extends Migration
+class CreateFieldPurchasersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateDonationsIntentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('donations_intents', function (Blueprint $table) {
+        Schema::create('field_purchasers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('amount');
-            $table->string('email');
-            $table->integer('donation_id')->references('id')->on('donations')->nullable(); //only get value when the transaction is confirm
+            $table->string('name', 32);
+            $table->string('email', 64);
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateDonationsIntentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donations_intents');
+        Schema::dropIfExists('field_purchasers');
     }
 }

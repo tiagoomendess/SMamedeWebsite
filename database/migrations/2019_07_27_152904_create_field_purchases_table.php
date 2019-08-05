@@ -15,10 +15,12 @@ class CreateFieldPurchasesTable extends Migration
     {
         Schema::create('field_purchases', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('row');
-            $table->integer('column');
-            $table->integer('field_purchaser_id')->references('id')->on('field_purchasers');
+            $table->unsignedTinyInteger('row');
+            $table->unsignedTinyInteger('column');
+            $table->unsignedBigInteger('field_purchaser_id')->references('id')->on('field_purchasers');
             $table->timestamps();
+
+            $table->unique(['row', 'column']);
         });
     }
 

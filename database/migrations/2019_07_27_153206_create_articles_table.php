@@ -15,11 +15,14 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('slug');
-            $table->string('short_description');
-            $table->string('content');
-            $table->integer('media_id');
+            $table->string('title', 128);
+            $table->string('slug', 128);
+            $table->string('short_description', 256);
+            $table->text('content');
+            $table->timestamp('published_at');
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('media_id')->references('id')->on('media');
+            $table->boolean('visible')->default(false);
             $table->timestamps();
         });
     }
