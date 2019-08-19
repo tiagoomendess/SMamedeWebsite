@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/sintetico', 'Web\TurfProjectController@index')->name('turfProjectLandingPage');
+
+Route::domain('sintetico.' . config('custom.app_domain'))->group(function () {
+    Route::get('/', 'Web\TurfProjectController@index')->name('turfProjectLandingPage');
+});

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class FieldPurchase extends Model
 {
     protected $fillable = [
-        'row', 'column', 'field_purchaser_id'
+        'row', 'column', 'field_purchaser_id', 'letter', 'color'
     ];
 
     protected $casts = [];
