@@ -17,6 +17,8 @@ class CreateFieldPurchasesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedTinyInteger('row');
             $table->unsignedTinyInteger('column');
+            $table->char('letter', 1);
+            $table->char('color', 7)->default('#000000');
             $table->unsignedBigInteger('field_purchaser_id')->references('id')->on('field_purchasers');
             $table->timestamps();
 

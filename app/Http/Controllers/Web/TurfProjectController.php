@@ -15,7 +15,8 @@ class TurfProjectController extends BaseController
 
     public function index()
     {
-        $number = $this->turfProjectService->getANumber();
-        return view('front.pages.turfProjectLandingPage', ['number' => $number]);
+
+        $topBuyers = $this->turfProjectService->getTopBuyers();
+        return view('front.pages.turfProjectLandingPage', ['top_buyers' => $topBuyers]);
     }
 }

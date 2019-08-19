@@ -1,0 +1,224 @@
+.first-canvas {
+    z-index: 2;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-canvas > .main-title {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-canvas > .main-title > h1 {
+    color: #FFFFFF;
+}
+
+.first-canvas > .main-title > .images {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-canvas > .main-title > .images > img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 960px) {
+    .first-canvas > .main-title {
+        width: 90%;
+    }
+
+    .first-canvas > .main-title > .images {
+        width: 100%;
+    }
+}
+
+.green-top {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #0B654B;
+}
+
+.second-canvas {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(149, 149, 149, 0.33);
+    padding-top: 40px;
+}
+
+#parallax_1 {
+    height: 250px;
+}
+
+#parallax_1 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#parallax_2 {
+    height: 300px;
+}
+
+#parallax_2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-title {
+    color: white;
+    text-shadow: 2px 2px #2d2d2d;
+    text-align: center;
+}
+
+#parallax_2 > div > .meters-explain {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#parallax_2 > div > .meters-explain > div {
+    margin: 5px 30px;
+}
+
+#parallax_2 > div > .meters-explain > div > .step {
+    border: solid 2px #ffffff;
+    border-radius: 50%;
+    color: white;
+    padding: 0 10px 3px 10px;
+    font-size: 24px;
+    vertical-align: center;
+    text-align: center;
+    box-shadow: 2px 2px #2d2d2d;
+}
+
+#parallax_2 > div > .meters-explain > div > span {
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px #2d2d2d;
+}
+
+#ways-to-help > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#ways-to-help > div > img {
+    position: relative;
+    width: 50%;
+}
+
+#ways-to-help > div > h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#ways-to-help > div > span {
+    font-size: 20px;
+    text-align: center;
+}
+
+.field-outter {
+    padding: 2%;
+    background-color: #008000;
+}
+
+.field-outter > .field_image {
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    background-color: #0B654B;
+}
+
+.no-margin-down {
+    margin-bottom: 0;
+}
+
+#partners .partner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#partners .partner > a {
+    width: 70%;
+}
+
+#partners .partner > a > img {
+    width: 100%;
+}
+
+.top-buyers > li {
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.top-buyers > li > span {
+    font-size: 1.3rem;
+    border: solid 2px #2a2a2a;
+    padding: 3px 12px;
+}
+
+.top-buyers > li > span:nth-child(1) {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-weight: 600;
+    width: 50px;
+    text-align: center;
+}
+
+.top-buyers > li > span:nth-child(2) {
+    width: 75%;
+    margin-right: 3px;
+}
+
+.top-buyers > li > span:nth-child(3) {
+    right: 0;
+    width: 25%;
+    text-align: center;
+    padding: 3px 0;
+}

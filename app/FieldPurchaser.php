@@ -14,6 +14,8 @@ class FieldPurchaser extends Model
 
     protected $hidden = [];
 
+    protected $table = 'field_purchasers';
+
     public function purchases()
     {
         return $this->hasMany('App\FieldPurchase');
